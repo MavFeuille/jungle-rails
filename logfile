@@ -18,3 +18,11 @@
 2021-10-12 20:00:59.755 EDT [11255] STATEMENT:  DROP DATABASE IF EXISTS "jungle_development"
 2021-10-12 20:00:59.768 EDT [11257] ERROR:  permission denied to create database
 2021-10-12 20:00:59.768 EDT [11257] STATEMENT:  CREATE DATABASE "jungle_development" ENCODING = 'unicode'
+2021-10-12 20:20:12.917 EDT [11713] ERROR:  must be owner of database jungle_development
+2021-10-12 20:20:12.917 EDT [11713] STATEMENT:  DROP DATABASE IF EXISTS "jungle_development"
+2021-10-12 20:20:12.946 EDT [11715] ERROR:  permission denied to create database
+2021-10-12 20:20:12.946 EDT [11715] STATEMENT:  CREATE DATABASE "jungle_development" ENCODING = 'unicode'
+2021-10-12 23:17:48.204 EDT [98103] LOG:  received smart shutdown request
+2021-10-12 23:17:48.207 EDT [98103] LOG:  background worker "logical replication launcher" (PID 98110) exited with exit code 1
+2021-10-12 23:17:48.208 EDT [98105] LOG:  shutting down
+2021-10-12 23:17:48.233 EDT [98103] LOG:  database system is shut down
