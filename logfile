@@ -1,0 +1,20 @@
+2021-10-12 19:48:00.402 EDT [98103] LOG:  starting PostgreSQL 14.0 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2021-10-12 19:48:00.403 EDT [98103] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-12 19:48:00.403 EDT [98103] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-12 19:48:00.403 EDT [98103] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-12 19:48:00.406 EDT [98104] LOG:  database system was shut down at 2021-10-12 19:47:39 EDT
+2021-10-12 19:48:00.408 EDT [98103] LOG:  database system is ready to accept connections
+2021-10-12 19:48:11.650 EDT [98112] FATAL:  role "labber" does not exist
+2021-10-12 19:48:30.346 EDT [98131] FATAL:  role "labber" does not exist
+2021-10-12 19:49:20.999 EDT [98153] FATAL:  database "mavisyip" does not exist
+2021-10-12 19:51:53.994 EDT [98172] ERROR:  syntax error at or near "labber" at character 34
+2021-10-12 19:51:53.994 EDT [98172] STATEMENT:  CREATE ROLE labber WITH PASSWORD labber;
+2021-10-12 19:52:32.015 EDT [98172] ERROR:  syntax error at or near ""labber"" at character 34
+2021-10-12 19:52:32.015 EDT [98172] STATEMENT:  CREATE ROLE labber WITH PASSWORD "labber";
+2021-10-12 19:55:00.280 EDT [10477] FATAL:  role "labber" is not permitted to log in
+2021-10-12 19:56:11.420 EDT [98172] ERROR:  syntax error at or near "'labber'" at character 12
+2021-10-12 19:56:11.420 EDT [98172] STATEMENT:  ALTER ROLE 'labber' WITH LOGIN;
+2021-10-12 20:00:59.755 EDT [11255] ERROR:  must be owner of database jungle_development
+2021-10-12 20:00:59.755 EDT [11255] STATEMENT:  DROP DATABASE IF EXISTS "jungle_development"
+2021-10-12 20:00:59.768 EDT [11257] ERROR:  permission denied to create database
+2021-10-12 20:00:59.768 EDT [11257] STATEMENT:  CREATE DATABASE "jungle_development" ENCODING = 'unicode'
