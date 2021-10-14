@@ -7,7 +7,11 @@
   <%= form_for :user, url: '/users' do |f| %>
   
     <li>
-      Name: <%= f.text_field :name %>
+      First Name: <%= f.text_field :first_name %>
+    </li>
+      <br>
+    <li>
+      Last Name: <%= f.text_field :last_name %>
     </li>
       <br>
     <li>
