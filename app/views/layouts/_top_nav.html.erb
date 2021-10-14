@@ -49,7 +49,7 @@
         </li>
         <% if current_user %>  
             <li>
-              Welcome! <%= current_user.name %>
+              Welcome! <%= current_user.first_name %>
             </li>
             <li>
               <%= link_to "Logout", '/logout' %>
