@@ -61,7 +61,7 @@ RSpec.describe Product, type: :model do
 
     it "is not valid without a category" do
       @category = Category.new
-      # @category.name = 'test'
+      @category.name = 'test'
       @product = Product.new
       @product.name = 'Test product'
       @product.price = 10099
