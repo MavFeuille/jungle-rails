@@ -92,6 +92,52 @@ RSpec.describe User, type: :model do
       )
       expect(@user).to_not be_valid
     end
-
   end
+
+  describe '.authenticate_with_credentials' do
+    it "is valid if users credentials are valid" do
+      @user = User.create(
+        first_name: 'first name',
+        last_name: 'last name',
+        email: '1@1.com',
+        password: '12345678',
+        password_confirmation: '12345678'
+      )
+      @user.save
+
+      user = User.authenticate_with_credentials('1@1.com', '12345678')
+      expect(user).to eql(@user)
+    end
+
+    it "should not pass if users credentials are valid" do
+      @user = User.create(
+        first_name: 'first name',
+        last_name: 'last name',
+        email: '1@1.com',
+        password: '12345678',
+        password_confirmation: '12345678'
+      )
+      @user.save
+
+      user = User.authenticate_with_credentials('1@1.com', '123456789')
+      expect(user).to be(nil)
+    end
+
+    it "should pass when email contains spaces" do
+      @user = User.create(
+        first_name: 'first name',
+        last_name: 'last name',
+        email: '1@1.com',
+        password: '12345678',
+        password_confirmation: '12345678'
+      )
+      @user.save
+
+      user = User.authenticate_with_credentials(' 1@1.com ', '12345678')
+      expect(user).to eql(@user)
+    end
+  end
+
+
 end
+
