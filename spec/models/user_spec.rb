@@ -82,5 +82,16 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end
 
+    it "is not valid if password length is shorter than 8 characters" do
+      @user = User.create(
+        first_name: 'test first name',
+        last_name: 'test last name',
+        email: '1@1.com',
+        password: '12345678',
+        password_confirmation: '1234567'
+      )
+      expect(@user).to_not be_valid
+    end
+
   end
 end
