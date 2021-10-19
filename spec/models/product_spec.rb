@@ -58,5 +58,18 @@ RSpec.describe Product, type: :model do
       expect(@product).to_not be_valid
       expect(@product.errors.full_messages).to eq ["Quantity can't be blank"]
     end
+
+    it "is not valid without a category" do
+      @category = Category.new
+      # @category.name = 'test'
+      @product = Product.new
+      @product.name = 'Test product'
+      @product.price = 10099
+      @product.quantity = 1
+      @product.category = nil
+
+      expect(@product).to_not be_valid
+      expect(@product.errors.full_messages).to eq ["Category can't be blank"]
+    end
   end
 end
